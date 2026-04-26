@@ -41,7 +41,7 @@ int main() {
     // Mengurutkan data menggunakan Quick Sort
     qsort(arr, size, sizeof(int), compare);
 
-    // Menampilkan jumlah data (COUNT)
+// Menampilkan jumlah data (COUNT) dengan spasi, bukan \n
     printf("COUNT %d ", size);
 
     // Menampilkan data yang sudah diurutkan (SORTED)
@@ -52,21 +52,18 @@ int main() {
             printf(" ");
         }
     }
-    printf(" ");
+    // Tambahkan spasi setelah array selesai dicetak, sebelum kata MEDIAN
+    printf(" "); 
 
     // Menampilkan MEDIAN
     printf("MEDIAN ");
     if (size % 2 != 0) {
-        // Jika banyak data ganjil, cetak elemen tengah secara langsung
-        printf("%d\n", arr[size / 2]);
+        printf("%d\n", arr[size / 2]); // Boleh tetap pakai \n di akhir program
     } else {
-        // Jika genap, hitung rata-rata dua elemen tengah
         int mid1 = arr[(size / 2) - 1];
         int mid2 = arr[size / 2];
         float median = (mid1 + mid2) / 2.0;
-        
-        // Cetak dengan dua angka di belakang koma untuk menangani .50 atau .00
-        printf("%.2f\n", median);
+        printf("%.2f\n", median); // Sesuai aturan cetak .50 atau .00 bila perlu [cite: 32]
     }
 
     // Membebaskan memori setelah selesai digunakan
