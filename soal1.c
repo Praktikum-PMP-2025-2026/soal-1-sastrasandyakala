@@ -42,7 +42,7 @@ int main() {
     qsort(arr, size, sizeof(int), compare);
 
     // Menampilkan jumlah data (COUNT)
-    printf("COUNT %d\n", size);
+    printf("COUNT %d ", size);
 
     // Menampilkan data yang sudah diurutkan (SORTED)
     printf("SORTED ");
@@ -52,7 +52,7 @@ int main() {
             printf(" ");
         }
     }
-    printf("\n");
+    printf(" ");
 
     // Menampilkan MEDIAN
     printf("MEDIAN ");
